@@ -1,24 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
+import Directory from './Components/Directory/Directory';
 
 function App() {
+  const categories = [
+    {
+      id: 1,
+      title: 'HTML',
+      imageUrl: 'https://cdn-icons-png.flaticon.com/512/919/919827.png',
+    },
+    {
+      id: 2,
+      title: 'CSS',
+      imageUrl: 'https://cdn-icons-png.flaticon.com/512/5968/5968242.png',
+    },
+    {
+      id: 3,
+      title: 'JavaScript',
+      imageUrl: 'https://cdn-icons-png.flaticon.com/512/5968/5968292.png',
+    },
+    {
+      id: 4,
+      title: 'React',
+      imageUrl: 'https://icons-for-free.com/download-icon-design+development+facebook+framework+mobile+react+icon-1320165723839064798_512.png',
+    },
+    {
+      id: 5,
+      title: 'Code BUNDLE',
+      imageUrl: 'https://cdn-icons-png.flaticon.com/512/51/51953.png',
+    },
+  ]
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Directory categories={categories}/>
   );
 }
 
